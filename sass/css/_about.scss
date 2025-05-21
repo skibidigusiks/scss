@@ -1,0 +1,30 @@
+.container {
+
+    &__feed {
+
+        margin: 45px;
+        padding-top: 30px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__left {
+
+            &--text {
+
+                color: red;
+                display:  flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+    }
+
+}
