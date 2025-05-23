@@ -20,7 +20,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: Georgia, serif;
-
+    z-index: 1;
+    background-color: black;
 }
 
 .container {
@@ -28,7 +29,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: $background-color-light;
-
+    background-color: transparent;
     
     &__nav {
 
@@ -39,8 +40,8 @@ body {
         justify-content: space-between;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
-        background: #3F5EFB;
         background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        
         
 
         &__left {
@@ -72,6 +73,7 @@ body {
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            z-index: 1;
 
             &--link {
 

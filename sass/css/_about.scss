@@ -11,12 +11,18 @@
 
         &__left {
 
-            &--text {
+            &--top_text {
 
                 color: red;
                 display:  flex;
                 justify-content: center;
                 align-items: center;
+
+            }
+
+            &--bottom_text {
+
+                color: red;
 
             }
 

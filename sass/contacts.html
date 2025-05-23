@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>KONTAKTI - SASS</title>
+    <script src="partikli/particles.js" defer></script>
 </head>
 <body>
+    <div  id="particles-js" style="position: fixed; z-index: -1; width: 100%;"></div>
     <div class="container">
         <div class="container__nav">
             <div class="container__nav__left">
@@ -20,7 +22,7 @@
         </div>
         <div class="container__feed">
             <div class="container__feed--h1">
-                <h1>Skibidi feed</h1>
+                <h1>Zvaniet šim vīrietim!!!</h1>
             </div>
             <div class="container__feed--p">
                 <p>
@@ -28,7 +30,31 @@
 
                 </p>
             </div>
+            <div class="container__feed--h1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quibusdam vitae provident maxime! Ratione facere enim dignissimos voluptate veniam aut molestiae. Exercitationem praesentium magnam alias voluptatem, accusamus harum quas aperiam, fuga officiis, reiciendis quod ut voluptas quisquam excepturi esse quia eius illo quo officia temporibus eaque velit nobis! Sed et dicta explicabo iste harum ratione consequatur molestiae perferendis doloribus! Similique incidunt harum dicta modi autem repellat. Odio error doloribus commodi dolores unde pariatur quo nam rerum dolorum sit eum, debitis itaque, molestiae perferendis! Totam dolorem reprehenderit repellendus facilis alias doloremque reiciendis! Optio aliquam perspiciatis, quisquam deleniti eaque repellat blanditiis quas.
+            </div>
         </div>
+        <script src="partikli/particles.js"></script>
+        <script src="partikli/app.js"></script>
+        <script>
+            var count_particles, stats, update;
+            stats = new Stats;
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() {
+                stats.begin();
+                stats.end();
+                if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+                }
+                requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+            </script>
     </div>
     
 </body>

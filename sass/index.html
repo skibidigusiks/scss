@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>MĀCAMIES - SASS</title>
-    <script src="particles.js" defer></script>
 </head>
 <body>
+    <div  id="particles-js" style="position: fixed; z-index: -1; width: 100%;"></div>
     <div class="container">
         <div class="container__nav">
             <div class="container__nav__left">
@@ -19,9 +19,44 @@
                 <a href="contacts.html" class="container__nav__right--link">Contacts</a>
             </div>
         </div>
-        <div style="display: flex; align-items: center; justify-content: center; margin-top: 100px;">
+        <div class="container__feed">
+            <div class="container__feed__left">
+                <div class="container__feed__left--top_text">
+                    <h1>Sveicināti VTDT!</h1>
+                </div>
+                <div class="container__feed__left--bottom_text">
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ipsum?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 100px; color: red;">
             Cau
         </div>
+        
+            <script src="partikli/particles.js"></script>
+            <script src="partikli/app.js"></script>
+            <script>
+            var count_particles, stats, update;
+            stats = new Stats;
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() {
+                stats.begin();
+                stats.end();
+                if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+                }
+                requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+            </script>
+
     </div>
     
 </body>
